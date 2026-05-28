@@ -54,7 +54,7 @@ Unlike vision-centric and text-guided pruning methods, query-based compression c
   <em>Figure 6. Overview of Safety-Aware Pruning.</em>
 </p>
 
-We propose **Safety-Aware Pruning (SAP)** to mitigate pruning-induced safety risks. SAP is built on the observation that standard token pruning removes benign background tokens and forces attention to concentrate on retained malicious foreground anchors, leading to **Pruning-Induced Malicious Amplification**.
+We propose **Safety-Aware Pruning (SAP)** to mitigate pruning-induced safety risks. Standard token pruning is essentially a biased semantic selection process, systematically removing benign background tokens while retaining salient malicious anchors. This disrupts the original attention equilibrium and leads to **Pruning-Induced Malicious Amplification**.
 
 SAP consists of three steps:
 
