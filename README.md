@@ -59,13 +59,13 @@ We propose **Safety-Aware Pruning (SAP)** to mitigate pruning-induced safety ris
 SAP consists of three steps:
 
 **Malicious Anchor Identification.**  
-SAP identifies retained visual tokens that are both highly attended and semantically deviated from a safety-aligned direction.
+First, retained visual tokens are ranked by both their attention strength and semantic deviation from a safety-aligned direction, allowing malicious anchors to be localized during generation.
 
 **Benign Token Restoration.**  
-SAP restores pruned benign tokens from the background to rebuild the safety buffer removed by standard pruning.
+Next, a small number of pruned background tokens are restored to rebuild the benign safety buffer removed by standard pruning.
 
 **Attention Reallocation.**  
-SAP reallocates excessive attention from malicious anchors to restored benign tokens, reducing the dominance of harmful visual semantics during generation.
+Finally, excessive attention on malicious anchors is redirected to the restored benign tokens, reducing the dominance of harmful visual semantics during generation.
 
 ---
 
@@ -79,13 +79,14 @@ SAP reallocates excessive attention from malicious anchors to restored benign to
   <em>Table 2. Main results on safety and utility benchmarks.</em>
 </p>
 
-SAP consistently mitigates pruning-induced safety degradation across multiple representative token-pruning methods. Meanwhile, it largely preserves general multimodal utility, showing that safety and efficiency are not necessarily conflicting goals in token-pruned VLMs.
+Across five representative Token-Pruning methods and three multimodal safety benchmarks, SAP consistently reduces jailbreak attack success rates. Meanwhile, the average utility remains close to the corresponding pruning baselines on MMBench, MM-Vet, LLaVA-Bench, and SQA, indicating that pruning-induced safety degradation can be mitigated without compromising general multimodal performance.
 
 ---
 
 ## Citation
 
-If you find this work useful, please consider citing:
+If you find this work useful, please cite our paper:
+
 
 ```bibtex
 @inproceedings{wang2026understanding,
