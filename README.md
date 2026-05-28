@@ -13,13 +13,24 @@ Token-Pruning accelerates Vision-Language Models by removing redundant visual to
 
 ## Main Findings
 
-<p align="center">
-  <img src="assets/fig1_safety_comparison.png" width="80%">
-</p>
-
-<p align="center">
-  <em>Figure 1. Comparison of Attack Success Rate across Token-Pruning methods.</em>
-</p>
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/fig1_safety_comparison.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/figure3.png" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figure 1. Comparison of Attack Success Rate across Token-Pruning methods.</em>
+    </td>
+    <td align="center">
+      <em>Figure 3. Comparison of safety and utility across different Token-Pruning methods.</em>
+    </td>
+  </tr>
+</table>
 
 
 **Finding 1. Token-Pruning significantly degrades safety, with Text-Guided Pruning exhibiting the most severe adverse effects on average, whereas Random Pruning maintains it.**  
