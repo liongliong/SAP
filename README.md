@@ -21,14 +21,15 @@ Token-Pruning accelerates Vision-Language Models by removing redundant visual to
   <em>Figure 1. Comparison of Attack Success Rate across Token-Pruning methods.</em>
 </p>
 
-**Finding 1. Token-Pruning can significantly degrade VLM safety.**  
-Most vision-centric and text-guided pruning methods increase jailbreak vulnerability compared with the original model.
 
-**Finding 2. Safety degradation occurs before utility collapse.**  
-As the pruning ratio increases, the attack success rate rises while general task performance can remain relatively stable, indicating that the safety issue is not simply caused by reduced model capability.
+**Finding 1. Token-Pruning significantly degrades safety, with Text-Guided Pruning exhibiting the most severe adverse effects on average, whereas Random Pruning maintains it.**  
+Mainstream pruning methods generally lead to a noticeable increase in ASR compared with the original model. In particular, text-guided pruning methods show the most severe safety degradation on average. In contrast, random pruning keeps ASR relatively stable, suggesting that the degradation does not simply come from reducing the number of tokens, but from biased token selection mechanisms.
 
-**Finding 3. Query-based compression shows opposite safety behavior.**  
-Unlike standard pruning methods, query-based compression maintains a more balanced attention distribution and can improve safety even under aggressive compression.
+**Finding 2. Safety degradation occurs without utility collapse.**  
+As the pruning ratio increases from moderate to high levels, ASR rises substantially while utility remains relatively stable. This indicates that safety degradation is not merely a byproduct of diminished model capability, but is closely related to the pruning mechanism itself.
+
+**Finding 3. Query-based Compression exhibits opposite safety behavior.**  
+Unlike vision-centric and text-guided pruning methods, query-based compression can improve model safety even under extremely high compression ratios. This counterintuitive result suggests that enhancing safety under Token-Pruning is feasible, rather than an inherent efficiency-safety trade-off.
 
 ---
 
