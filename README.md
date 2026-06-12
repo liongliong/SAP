@@ -2,7 +2,6 @@
 
 Official repository for the ICML 2026 paper: "Understanding and Mitigating Token-Pruning-Induced Vulnerabilities in VLMs". This work studies how token pruning affects the safety behavior of vision-language models under multimodal jailbreak settings, and proposes Safety-Aware Pruning (SAP) to mitigate pruning-induced vulnerabilities while preserving acceleration.
 
-
 ---
 
 ## Abstract
